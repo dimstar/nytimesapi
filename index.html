@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>NYT Search</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="jumbotron text-center">
+                    <h1>New York Times Search</h1>
+                </div>
+                <div class="card" id="parameters">
+                    <div class="card-header">
+                        Search Parameters
+                    </div>
+                    <div class="card-block">
+                        <input class="form-control" type="text" id="query" placeholder="Search">
+                        <select class="form-control" id="recordsToReceive">
+                            <label for="recordsToReceive">Records to Receive: </label>                            
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                    </select>
+                        <div class="form-group">
+                            <label for="startYear">Start Year (Optional): </label>
+                            <input type="text" class="form-control" id="startYear" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="endYear">End Year (Optional): </label>
+                            <input type="text" class="form-control" id="endYear" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-info" id="getNyTimes" type="submit" value="Search"> </input>
+                <input class="btn btn-info" id="clearResults" type="reset" value="Clear Results">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        Top Articles
+                    </div>
+                </div>
+                <div class="card-block" id="topArticles"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./caller.js"></script>
+</body>
+</html>
